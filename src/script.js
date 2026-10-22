@@ -13,28 +13,28 @@ const media = total / projetos.length;
 const notaReferencia = 8.0;
 const acimaReferencia = projetos.filter(p => p.nota > notaReferencia).length;
 
-document.getElementById("total-score").textContent = total.toFixed(1);
-document.getElementById("average-score").textContent = media.toFixed(2);
-document.getElementById("above-ref").textContent = acimaReferencia;
+document.getElementById("nota-total").textContent = total.toFixed(1);
+document.getElementById("nota-media").textContent = media.toFixed(2);
+document.getElementById("acima-referencia").textContent = acimaReferencia;
 
-let classification = "";
-let classColor = "";
+let classificacao = "";
+let classiCor = "";
 if (media >= 8.5) {
-    classification = "Destaque";
-    classColor = "text-yellow-500";
+    classificacao = "Destaque";
+    classiCor = "text-yellow-500";
 } else if (media >= 7.0) {
-    classification = "Bom Desempenho";
-    classColor = "text-emerald-500";
+    classificacao = "Bom Desempenho";
+    classiCor = "text-emerald-500";
 } else {
-    classification = "Em Desenvolvimento";
-    classColor = "text-blue-500";
+    classificacao = "Em Desenvolvimento";
+    classiCor = "text-blue-500";
 }
 
-const classEl = document.getElementById("classification");
-classEl.textContent = classification;
-classEl.className = `font-black text-xl ${classColor}`;
+const classEl = document.getElementById("classificacao");
+classEl.textContent = classificacao;
+classEl.className = `font-black text-xl ${classiCor}`;
 
-const grid = document.getElementById("projects-grid");
+const grid = document.getElementById("projetos-grid");
 projetos.forEach(p => {
     const scoreColor = p.nota >= notaReferencia ? 'text-emerald-500 bg-emerald-50' : 'text-amber-500 bg-amber-50';
     
