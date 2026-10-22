@@ -7,10 +7,12 @@
     <link href="./src/output.css" rel="stylesheet">
     <script type="module" src="./src/script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
         .card-hover { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
         .card-hover:hover { transform: translateY(-5px); }
     </style>
+
 </head>
 
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen">
@@ -19,118 +21,154 @@
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         
         <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight"><i class="fa-solid fa-atom mr-3 text-purple-300 animate-spin-slow"></i>Feira de Ciências e Inovação</h1>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Feira de Ciências e Inovação</h1>
             <p class="text-lg md:text-xl text-indigo-100 font-light max-w-2xl mx-auto">Explorando o futuro através dos projetos brilhantes desenvolvidos pelos nossos alunos.</p>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-10">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class="container mx-auto px-4 py-10 space-y-12">
+        <section id="sobre-feira">
 
-            <section class="lg:col-span-2">
-                <div class="flex items-center justify-between mb-6 border-b-2 border-indigo-100 pb-2">
-                    <h2 class="text-2xl font-bold text-indigo-900"><i class="fa-solid fa-lightbulb text-yellow-500 mr-2"></i>Projetos Apresentados</h2>
-                </div>
+            <div class="mb-6 border-b-2 border-indigo-100 pb-2">
+                <h2 class="text-2xl font-bold text-indigo-900">Sobre a Feira de Ciências</h2>
+            </div>
 
-                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                </div>
-            </section>
-
-            <aside class="space-y-6">
-                <div class="bg-white rounded-2xl shadow-md p-6 border-t-4 border-emerald-500">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fa-solid fa-chart-line text-emerald-500 mr-2"></i>Resultados da Feira</h3>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center">
-                            <span class="block text-xs text-slate-500 uppercase font-bold">Total Geral</span>
-                            <span id="total-score" class="text-2xl font-black text-indigo-600">0</span>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center">
-                            <span class="block text-xs text-slate-500 uppercase font-bold">Média</span>
-                            <span id="average-score" class="text-2xl font-black text-indigo-600">0</span>
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-md p-6 md:p-8 border border-slate-100">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-slate-800">Conhecimento, Ciência e Inovação</h3>
                     </div>
 
-                    <div class="bg-indigo-50 p-4 rounded-lg mb-4 flex items-center justify-between">
-                        <div>
-                            <span class="block text-sm font-semibold text-indigo-900">Projetos > 8.0</span>
-                            <span class="text-xs text-indigo-600">Referência de Excelência</span>
-                        </div>
-
-                        <span id="above-ref" class="text-3xl font-black text-indigo-600 bg-white px-4 py-1 rounded-full shadow-sm">0</span>
-                    </div>
-
-                    <div class="text-center pt-2 border-t border-slate-100">
-                        <span class="block text-sm text-slate-500 mb-1">Classificação Geral</span>
-                        <div id="classification" class="font-bold text-xl">-</div>
-                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-4">A Feira de Ciências e Inovação é um evento que reúne projetos desenvolvidos pelos alunos, incentivando a pesquisa científica, a criatividade e a busca por soluções para problemas do cotidiano.</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">Durante a feira, os visitantes podem conhecer experimentos, tecnologias e propostas sustentáveis, enquanto os estudantes compartilham seus conhecimentos e demonstram os resultados de suas pesquisas.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-6">
+                <div class="bg-white rounded-2xl shadow-md p-6 border border-slate-100">
                     <h3 class="text-xl font-bold text-slate-800 mb-4"><i class="fa-regular fa-clock text-blue-500 mr-2"></i>Programação</h3>
-                    <ul class="space-y-3 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
-                        <li class="relative flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-100">
+
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
                             <span class="font-bold text-blue-600">08:00</span>
-                            <span class="text-sm font-medium text-slate-700">Abertura dos Portões</span>
+                            <span class="text-sm font-medium text-slate-700 text-right">Abertura dos Portões</span>
                         </li>
-                        <li class="relative flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-100">
+
+                        <li class="flex items-center justify-between gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
                             <span class="font-bold text-blue-600">09:30</span>
-                            <span class="text-sm font-medium text-slate-700">Início das Avaliações</span>
+                            <span class="text-sm font-medium text-slate-700 text-right">Início das Avaliações</span>
                         </li>
-                        <li class="relative flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-100">
+
+                        <li class="flex items-center justify-between gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
                             <span class="font-bold text-blue-600">14:00</span>
-                            <span class="text-sm font-medium text-slate-700">Demonstração Prática</span>
+                            <span class="text-sm font-medium text-slate-700 text-right">Demonstração Prática</span>
                         </li>
-                        <li class="relative flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-100">
+
+                        <li class="flex items-center justify-between gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
                             <span class="font-bold text-blue-600">17:00</span>
-                            <span class="text-sm font-medium text-slate-700">Premiação e Encerramento</span>
+                            <span class="text-sm font-medium text-slate-700 text-right">Premiação e Encerramento</span>
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-md p-6 border border-amber-100">
-                    <h3 class="text-xl font-bold text-amber-900 mb-3"><i class="fa-solid fa-bullhorn text-amber-500 mr-2"></i>Orientações ao Público</h3>
-                    <ul class="text-sm text-amber-800 space-y-2">
-                        <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Não toque nos equipamentos sem autorização.</li>
-                        <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Evite usar flash nas áreas de robótica.</li>
-                        <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Vote no seu projeto favorito usando o QR Code na mesa.</li>
-                        <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Mantenha os corredores de circulação livres.</li>
-                    </ul>
+        <section id="projetos">
+            <div class="mb-6 border-b-2 border-indigo-100 pb-2">
+                <h2 class="text-2xl font-bold text-indigo-900">Projetos Apresentados</h2>
+            </div>
+
+            <div class="pb-3">
+                <p class="text-lg text-slate-600 leading-relaxed mb-4">Conheça os projetos apresentados pelos alunos e descubra como suas ideias aplicam conhecimentos científicos e tecnológicos para desenvolver soluções criativas e sustentáveis. Cada projeto possui uma proposta e uma pontuação que contribuem para a avaliação geral da feira.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+
+                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    </div>
+
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3"><i class="fa-solid fa-clipboard-list text-purple-500 mr-2"></i>Critérios (0 a 10)</h3>
-                    <div class="space-y-3">
-                        <div class="text-sm">
-                            <span class="font-bold text-slate-700 block">1. Criatividade e Inovação</span>
-                            <span class="text-slate-500 text-xs">O projeto apresenta uma solução nova?</span>
-                        </div>
+                <aside class="space-y-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-md p-6 border border-amber-100">
+                        <h3 class="text-xl font-bold text-amber-900 mb-3"><i class="fa-solid fa-bullhorn text-amber-500 mr-2"></i>Orientações ao Público</h3>
 
-                        <div class="text-sm">
-                            <span class="font-bold text-slate-700 block">2. Método Científico</span>
-                            <span class="text-slate-500 text-xs">A pesquisa seguiu etapas lógicas de testes?</span>
-                        </div>
+                        <ul class="text-sm text-amber-800 space-y-2">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Não toque nos equipamentos sem autorização.</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Evite usar flash nas áreas de robótica.</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Vote no seu projeto favorito usando o QR Code na mesa.</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Mantenha os corredores de circulação livres.</li>
+                        </ul>
+                    </div>
 
-                        <div class="text-sm">
-                            <span class="font-bold text-slate-700 block">3. Relevância Social/Ambiental</span>
-                            <span class="text-slate-500 text-xs">Impacto positivo na sociedade ou natureza.</span>
-                        </div>
+                    <div class="bg-white rounded-2xl shadow-md p-6 border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2"><i class="fa-solid fa-clipboard-list text-purple-500 mr-2"></i>Critérios de Avaliação</h3>
+                        <p class="text-sm text-slate-500 mb-4">Cada critério recebe uma nota de 0 a 10, conforme os aspectos avaliados.</p>
 
-                        <div class="text-sm">
-                            <span class="font-bold text-slate-700 block">4. Clareza na Apresentação</span>
-                            <span class="text-slate-500 text-xs">Domínio do assunto pelos alunos.</span>
+                        <div class="space-y-3">
+                            <div class="text-sm">
+                                <span class="font-bold text-slate-700 block">1. Criatividade e Inovação</span>
+                                <span class="text-slate-500 text-xs">O projeto apresenta uma ideia criativa ou uma solução inovadora?</span>
+                            </div>
+
+                            <div class="text-sm">
+                                <span class="font-bold text-slate-700 block">2. Método Científico</span>
+                                <span class="text-slate-500 text-xs">A pesquisa seguiu etapas organizadas de pesquisa e testes?</span>
+                            </div>
+
+                            <div class="text-sm">
+                                <span class="font-bold text-slate-700 block">3. Clareza na Apresentação</span>
+                                <span class="text-slate-500 text-xs">Os alunos demonstram domínio do assunto e explicam bem o projeto?</span>
+                            </div>
                         </div>
                     </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="resultados">
+            <div class="mb-6 border-b-2 border-indigo-100 pb-2">
+                <h2 class="text-2xl font-bold text-indigo-900">Resultados da Feira</h2>
+            </div>
+                
+            <div class="pb-3">
+                <p class="text-lg text-slate-600 leading-relaxed mb-4">Confira o desempenho geral dos projetos apresentados, incluindo a soma das notas, a média alcançada e a quantidade de projetos que superaram a nota de referência. A classificação geral é calculada automaticamente com base na média.</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-t-4 border-emerald-500">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center">
+                        <span class="block text-md text-slate-500 uppercase font-bold">Total Geral</span>
+                        <span id="total-score" class="text-2xl font-black text-indigo-600">0</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center">
+                        <span class="block text-md text-slate-500 uppercase font-bold">Média</span>
+                        <span id="average-score" class="text-2xl font-black text-indigo-600">0</span>
+                    </div>
                 </div>
-            </aside>
-        </div>
+
+                <div class="bg-indigo-50 p-4 rounded-lg mb-4 flex items-center justify-between">
+                    <div>
+                        <span class="block text-md font-semibold text-indigo-900">Projetos > 8.0</span>
+                        <span class="text-sm text-indigo-600">Referência de Excelência</span>
+                    </div>
+
+                    <span id="above-ref" class="text-3xl font-black text-indigo-600 bg-white px-4 py-1 rounded-full shadow-sm">0</span>
+                </div>
+
+                <div class="text-center pt-2 border-t border-slate-100">
+                    <span class="block text-md text-slate-500 mb-1">Classificação Geral</span>
+                    <div id="classification">-</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
         <p>Tecnologia em Sistemas para Internet - Desenvolvimento Web Frontend</p>
-        <p>Eduardo Igor e Francisco Sallyson</p>
-        <p>&copy; 2026 Feira de Ciência - IFRN Campus Currais Novos</p>
+        <p class="mt-1">Eduardo Igor e Francisco Sallyson</p>
+        <p class="mt-2">&copy; 2026 Feira de Ciência - IFRN Campus Currais Novos</p>
     </footer>
 </body>
 </html>
